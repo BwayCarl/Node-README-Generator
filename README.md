@@ -35,4 +35,4 @@
  - Email: [bwaycarl@gmail.com](bwaycarl@gmail.com)
 ## License 
  This project is MIT licensed. 
- Copyright 2020 Carlos Martinez
+ Copyright 2020 &cCopy; Carlos Martinez
