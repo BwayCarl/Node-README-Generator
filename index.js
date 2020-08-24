@@ -16,7 +16,7 @@ const questions = ([
     {//Table of Contents
         type: "input",
         name: "tableOfContents",
-        message:"Input your table of contents separated by commas."
+        message:"Input your Table of Contents separated by commas."
     },
     { //Description
         type: "input",
@@ -153,51 +153,50 @@ inquirer.prompt(questions).then(data => {
         console.log("Good.");
     })
     // Contributing
-    fs.appendFileSync("README.md", (`### Contributing \n ${data.contributing}`) + '\n', function(err) {
+    fs.appendFileSync("README.md", (`## Contributing \n ${data.contributing}`) + '\n', function(err) {
         if (err) {
             return console.log(err);
         }
         console.log("Okay.");
     })
     // Authors
-    fs.appendFileSync("README.md", (`### Authors \n ${data.authors}`) + '\n', function(err) {
+    fs.appendFileSync("README.md", (`## Authors \n ${data.authors}`) + '\n', function(err) {
         if (err) {
             return console.log(err);
         }
         console.log("Great.");
     })
     // Screenshots
-    fs.appendFileSync("README.md", (`### Screenshots \n ${data.screenshot}`) + '\n', function(err) {
+    fs.appendFileSync("README.md", (`## Screenshots \n ${data.screenshot}`) + '\n', function(err) {
         if (err) {
             return console.log(err);
         }
         console.log("Great.");
     })
     // Tests
-    fs.appendFileSync("README.md", (`### Tests \n ${data.test}`) + '\n', function(err) {
+    fs.appendFileSync("README.md", (`## Tests \n ${data.test}`) + '\n', function(err) {
         if (err) {
             return console.log(err);
         }
         console.log("Great.");
     })
     // Contact Info
-    fs.appendFileSync("README.md", (`### Contact Me 
-        '\n' Github: [${data.github}](${data.githubURL})
-        '\n' LinkedIn: [${data.authors}](${data.linkedinURL}) 
-        '\n' Twitter: [${data.twitter}](${data.twitterURL}) 
-        '\n' Email: [${data.email}](${data.email})` + '\n',
-    function(err) {
+    fs.appendFileSync("README.md", (`## Contact Me 
+        \n Github: [${data.github}](${data.githubURL})
+        \n LinkedIn: [${data.authors}](${data.linkedinURL}) 
+        \n Twitter: [${data.twitter}](${data.twitterURL}) 
+        \n Email: [${data.email}](${data.email})`) + '\n', function(err) {
         if (err) {
             return console.log(err);
         }
         console.log("Great.");
     }),
     // License 
-    fs.appendFileSync("README.md", (`### License \n ${data.license} \n ![](${data.badge})`) + '\n', function(err) {
+    fs.appendFileSync("README.md", (`## License \n This project is ${data.license} licensed. \n Copyright 2020 ${data.authors}`) + '\n', function(err) {
         if (err) {
             return console.log(err);
         }
         console.log("Okay.");
     })
 
-    )});
+    });
