@@ -167,7 +167,7 @@ inquirer.prompt(questions).then(data => {
         console.log("Great.");
     })
     // Screenshots
-    fs.appendFileSync("README.md", (`## Screenshots \n ${data.screenshot}`) + '\n', function(err) {
+    fs.appendFileSync("README.md", (`## Screenshots \n ![](${data.screenshot})`) + '\n', function(err) {
         if (err) {
             return console.log(err);
         }
