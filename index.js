@@ -182,10 +182,10 @@ inquirer.prompt(questions).then(data => {
     })
     // Contact Info
     fs.appendFileSync("README.md", (`## Contact Me 
-        \n Github: [${data.github}](${data.githubURL})
-        \n LinkedIn: [${data.authors}](${data.linkedinURL}) 
-        \n Twitter: [${data.twitter}](${data.twitterURL}) 
-        \n Email: [${data.email}](${data.email})`) + '\n', function(err) {
+        \n - Github: [${data.github}](${data.githubURL})
+        \n - LinkedIn: [${data.authors}](${data.linkedinURL}) 
+        \n - Twitter: [${data.twitter}](${data.twitterURL}) 
+        \n - Email: [${data.email}](${data.email})`) + '\n', function(err) {
         if (err) {
             return console.log(err);
         }
