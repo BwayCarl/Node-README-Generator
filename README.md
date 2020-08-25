@@ -34,6 +34,8 @@
 
  ![](./Assets/Images/READMEgen-2.png)
 
+### :movie_camera: [YouTube Video of the project in action.](https://youtu.be/QYEO4B7FDZQ) :movie_camera:
+
 ## Tests 
  ```npm test```
 
@@ -44,6 +46,6 @@
  - Email: [bwaycarl@gmail.com](mailto:bwaycarl@gmail.com)
 
 ## License 
- This project is [MIT](./Assets/License.txt) licensed.
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](./Assets/License.txt)
  
  &copy; 2020, Carlos Martinez
