@@ -35,7 +35,7 @@
 
  ![](./Assets/Images/READMEgen-2.png)
 
- ## Video
+ ## *Video*
 
 ###  :movie_camera: [YouTube Video of the project in action.](https://youtu.be/QYEO4B7FDZQ)
 
