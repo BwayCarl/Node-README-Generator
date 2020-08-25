@@ -1,6 +1,9 @@
 # NodeJS-README-Generator
-![Github issues](https://img.shields.io/github/issues/BwayCarl/Node-README-Generator)
+[![GitHub license](https://img.shields.io/github/license/BwayCarl/Node-README-Generator?logo=MIT)](https://github.com/BwayCarl/Node-README-Generator/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/BwayCarl/Node-README-Generator)](https://github.com/BwayCarl/Node-README-Generator/issues)
 [![GitHub forks](https://img.shields.io/github/forks/BwayCarl/Node-README-Generator)](https://github.com/BwayCarl/Node-README-Generator/network)
+[![GitHub stars](https://img.shields.io/github/stars/BwayCarl/Node-README-Generator)](https://github.com/BwayCarl/Node-README-Generator/stargazers)
+
 ### A command line interface to generate a README file.
 
 ## *Table of Contents*
