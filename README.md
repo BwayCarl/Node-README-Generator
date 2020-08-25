@@ -1,51 +1,54 @@
 # NodeJS-README-Generator
 ### A command line interface to generate a README file.
 
-## Table of Contents
+## *Table of Contents*
 - [Description](#description)
  - [Installation](#installation)
  - [Usage](#usage)
  - [Contributing](#contributing)
  - [Authors](#authors)
  - [Screenshots](#screenshots)
+ - [Video](#video)
  - [Tests](#tests)
  - [Contact Me](#contact-me)
  - [License](#license)
 
-## Description 
+## *Description* 
  When creating an open source project on GitHub, it is important to have a quality README with information about the app--what is the app for, how to use the app, how to install it, how to report issues, and how to make contributions so that other developers are more likely to use and contribute to the success of the project. A command-line application will allow for quick and easy generation of a project README to get started quickly. This will allow a project creator to spend more time working on finishing the project and less time creating a good README.
 
-## Installation 
+## *Installation* 
  ```npm i inquirer```
 
-## Usage 
+## *Usage*
  Enter ```node index.js``` into your command line and answer the questions provided in the terminal.
 
-## Contributing 
+## *Contributing* 
  Feel free to contribute. Just contact me and fork away!
 
-## Authors 
+## *Authors* 
  Carlos Martinez
 
-## Screenshots 
+## *Screenshots* 
  ![](./Assets/Images/READMEgen-1.png)
 
  ![](./Assets/Images/READMEgen-3.png)
 
  ![](./Assets/Images/READMEgen-2.png)
 
-### :movie_camera: [YouTube Video of the project in action.](https://youtu.be/QYEO4B7FDZQ) :movie_camera:
+ ## Video
 
-## Tests 
+###  :movie_camera: [YouTube Video of the project in action.](https://youtu.be/QYEO4B7FDZQ)
+
+## *Tests*
  ```npm test```
 
-## Contact Me 
- - Github: [BwayCarl](https://github.com/BwayCarl)
- - LinkedIn: [Carlos Martinez](https://www.linkedin.com/in/carlos-martinez-8702b146/) 
- - Twitter: [@BwayCarlDev](https://twitter.com/BwayDev) 
- - Email: [bwaycarl@gmail.com](mailto:bwaycarl@gmail.com)
+## *Contact Me*
+ - Github: **[BwayCarl](https://github.com/BwayCarl)**
+ - LinkedIn: **[Carlos Martinez](https://www.linkedin.com/in/carlos-martinez-8702b146/)** 
+ - Twitter: **[@BwayCarlDev](https://twitter.com/BwayDev)**
+ - Email: **[bwaycarl@gmail.com](mailto:bwaycarl@gmail.com)**
 
-## License 
+## *License* 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](./Assets/License.txt)
  
  &copy; 2020, Carlos Martinez
