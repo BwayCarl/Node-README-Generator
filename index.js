@@ -61,7 +61,7 @@ const questions = ([
     {//Sceenshots
         type: "input",
         name: "screenshot",
-        message:"Enter the URL of your screenshot or video."
+        message:"Enter the URLs of your screenshots or video, separated by commas."
     },
     {//Tests
         type: "input",
@@ -166,15 +166,15 @@ inquirer.prompt(questions).then(data => {
         }
         console.log("Great.");
     })
+
     // Screenshots
-    fs.appendFileSync("README.md", ("## Screenshots" + '\n ![](' + data.screenshot.split(", ")
-    .join(') \n ')) + '\n', function(err) {  
+    fs.appendFileSync("README.md", (`## Screenshots \n ![](${data.screenshot})`) + '\n', function(err) {
         if (err) {
             return console.log(err);
         }
-        console.log("Perfect!");
-    
+        console.log("Great.");
     })
+
     // Tests
     fs.appendFileSync("README.md", (`## Tests \n ${data.test}`) + '\n', function(err) {
         if (err) {
@@ -187,7 +187,7 @@ inquirer.prompt(questions).then(data => {
         \n - Github: [${data.github}](${data.githubURL})
         \n - LinkedIn: [${data.authors}](${data.linkedinURL}) 
         \n - Twitter: [${data.twitter}](${data.twitterURL}) 
-        \n - Email: [${data.email}]("mailto:"${data.email})`) + '\n', function(err) {
+        \n - Email: [${data.email}](mailto:${data.email})`) + '\n', function(err) {
         if (err) {
             return console.log(err);
         }
