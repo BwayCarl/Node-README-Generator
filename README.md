@@ -54,6 +54,6 @@
  - Email: **[bwaycarl@gmail.com](mailto:bwaycarl@gmail.com)**
 
 ## *License* 
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](./Assets/License.txt)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/BwayCarl/Node-README-Generator/blob/master/LICENSE)
  
  &copy; 2020, Carlos Martinez
