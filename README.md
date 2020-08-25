@@ -1,4 +1,5 @@
 # NodeJS-README-Generator
+![](https://img.shields.io/github/issues/BwayCarl/Node-README-Generator)
 ### A command line interface to generate a README file.
 
 ## *Table of Contents*
