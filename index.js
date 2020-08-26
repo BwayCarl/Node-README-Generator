@@ -1,8 +1,10 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-const questions = ([
+//Function for questions the user answers in the command line.
 
+inquirer.prompt([
+    
     { //Title
         type: "input",
         name: "title",
@@ -12,11 +14,6 @@ const questions = ([
         type: "input",
         name: "blurb",
         message:"Write a short, one sentence blurb describing your project."
-    },
-    {//Table of Contents
-        type: "input",
-        name: "tableOfContents",
-        message:"Input your Table of Contents separated by commas."
     },
     { //Description
         type: "input",
@@ -46,7 +43,7 @@ const questions = ([
     {//Badges
         type: "input",
         name: "badge",
-        message:"Input your badge codes here separated by commas. (For more info, go to https://shields.io/)"
+        message:"Input your badge URL here. (For more info, go to https://shields.io/)"
     },
     {//Contributing
         type: "input",
@@ -58,10 +55,10 @@ const questions = ([
         name: "authors",
         message:"Who is the author of this project?"
     },
-    {//Sceenshots
+    {//Screenshots
         type: "input",
         name: "screenshot",
-        message:"Enter the URLs of your screenshots or video, separated by commas."
+        message:"Enter the URL screenshot or video."
     },
     {//Tests
         type: "input",
@@ -95,110 +92,75 @@ const questions = ([
         name: "linkedinURL",
         message:"What is your LinkedIn profile URL?"
     },
-    
+
     {//Email
         type: "input",
         name: "email",
         message:"What is your email address?"
-    },
-])
+    }
 
-console.clear();
+    ]).then(answers => {
+    const { title, badge, blurb, description, installation, usage, contributing, screenshot, test, github, githubURL, authors, linkedinURL, twitter, twitterURL, email, license } = answers;
 
-// Function to generate markdown for README file.
+    // README Template.
 
-inquirer.prompt(questions).then(data => {
-   
-    // README Title
-    fs.writeFileSync("README.md", (`# ${data.title}`) + '\n', function(err) {       
-        if (err) {
-            return console.log(err);
-        }
-        console.log("Great!");
-    })
-    // Quick one line description of project
-    fs.appendFileSync("README.md", (`### ${data.blurb}`) + '\n', function(err) {    
-        if (err) {
-            return console.log(err);
-        }
-        console.log("Perfect!");
-    })
-    // Table of Contents
-    fs.appendFileSync("README.md", ("## Table of Contents" + '\n' + '- ' + data.tableOfContents.split(", ")
-    .join('\n ' + '- ')) + '\n', function(err) {  
-        if (err) {
-            return console.log(err);
-        }
-        console.log("Perfect!");
-    })
-    // Detailed description  
-    fs.appendFileSync("README.md", (`## Description \n ${data.description}`) + '\n', function(err) {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("Excellent!");
-    })
-    // Installation
-    fs.appendFileSync("README.md", (`## Installation \n ${data.installation}`) + '\n', function(err) {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("Good.");
-    })
-    // Usage
-    fs.appendFileSync("README.md", (`## Usage \n ${data.usage}`) + '\n', function(err) {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("Good.");
-    })
-    // Contributing
-    fs.appendFileSync("README.md", (`## Contributing \n ${data.contributing}`) + '\n', function(err) {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("Okay.");
-    })
-    // Authors
-    fs.appendFileSync("README.md", (`## Authors \n ${data.authors}`) + '\n', function(err) {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("Great.");
-    })
+const READMEfile = `# ${title} 
+![GitHub license](${badge})
 
-    // Screenshots
-    fs.appendFileSync("README.md", (`## Screenshots \n ![](${data.screenshot})`) + '\n', function(err) {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("Great.");
-    })
+### ${blurb}
 
-    // Tests
-    fs.appendFileSync("README.md", (`## Tests \n ${data.test}`) + '\n', function(err) {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("Great.");
-    })
-    // Contact Info
-    fs.appendFileSync("README.md", (`## Contact Me 
-        \n - Github: [${data.github}](${data.githubURL})
-        \n - LinkedIn: [${data.authors}](${data.linkedinURL}) 
-        \n - Twitter: [${data.twitter}](${data.twitterURL}) 
-        \n - Email: [${data.email}](mailto:${data.email})`) + '\n', function(err) {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("Great.");
-    }),
-    // License 
-    fs.appendFileSync("README.md", (`## License \n This project is ${data.license} licensed. \n Copyright 2020 ${data.authors}`) + '\n', function(err) {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("Okay.");
-    })
+## *Table of Contents*
+
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Authors](#authors)
+- [Screenshots](#screenshots)
+- [Video](#video)
+- [Tests](#tests)
+- [Contact Me](#contact-me)
+
+## *Description* 
+${description}
+
+## *Installation*
+${installation}
+
+## *Usage* 
+${usage}
+
+## *Contributing*
+${contributing}
+
+## *Authors*
+${authors}
+
+## *Screenshots*
+![](${screenshot})
+
+## *Video*
+
+## *Tests*
+${test}
+
+## *Contact Me*
+- Github: **[${github}](${githubURL})
+- LinkedIn: **[${authors}](${linkedinURL}) 
+- Twitter: **[${twitter}](${twitterURL}) 
+- Email: **[${email}](mailto:${email})
+
+This project is ${license} licensed.
+
+&copy; 2020 ${authors}`
+
+//Generating the README file with fs.write.
+fs.writeFile("README.md", READMEfile, err => {
+    if(err){
+        console.log(err);
+    }else{
+        console.log("Great! You're all set.");
+    }
+});
 
     });
